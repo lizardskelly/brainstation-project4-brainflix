@@ -1,0 +1,7 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+
+.video {
+  width: 100%;
+  background-color: $background-dark-color;
+}
