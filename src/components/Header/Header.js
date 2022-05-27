@@ -1,5 +1,6 @@
-import logo from '../../assets/images/BrainFlix-logo.svg'
-import avatar from '../../assets/images/Mohan-muruge.jpg'
+import logo from '../../assets/images/BrainFlix-logo.svg';
+import avatar from '../../assets/images/Mohan-muruge.jpg';
+import './header.scss';
 
 const Header = () => {
   return (  
