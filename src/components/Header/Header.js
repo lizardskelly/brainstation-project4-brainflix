@@ -8,14 +8,15 @@ const Header = () => {
         className='header'
       >
         <img
-          className="header__logo"
+          className='header__logo'
           src={logo}
+          alt='brainflix logo'
         />
         <input
           className='header__search'
           id='search'
           placeholder='Search'
-        ></input>
+        />
         <button
           className='header__button'
         >
@@ -24,6 +25,7 @@ const Header = () => {
         <img
           className='header__avatar'
           src={avatar}
+          alt='user avatar'
         />
       </header>
     </>
