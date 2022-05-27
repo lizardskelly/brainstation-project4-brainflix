@@ -13,11 +13,20 @@ const Header = () => {
           src={logo}
           alt='brainflix logo'
         />
-        <input
-          className='header__search'
-          id='search'
-          placeholder='Search'
-        />
+        <div
+          className='header__search-container'
+        >
+          <input
+            className='header__search'
+            id='search'
+            placeholder='Search'
+          />
+          <img
+            className='header__avatar header__avatar--mobile'
+            src={avatar}
+            alt='user avatar'
+          />
+        </div>
         <button
           className='header__button'
         >
