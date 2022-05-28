@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import CommentForm from './components/CommentForm/CommentForm';
+import CommentList from './components/CommentList/CommentList';
 
 class App extends Component {
 
@@ -13,16 +14,21 @@ class App extends Component {
   }
 
   render() {
+    const { currentVideo } = this.state
+
     return (
       <>
         <Header />
         <VideoPlayer 
-          video = {this.state.currentVideo}
+          video = {currentVideo}
         />
         <VideoDetails 
-          details = {this.state.currentVideo}
+          details = {currentVideo}
         />
         <CommentForm />
+        <CommentList 
+          comments = {currentVideo.comments}
+        />
       </>
     )
   }
