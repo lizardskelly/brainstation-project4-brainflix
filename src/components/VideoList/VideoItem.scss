@@ -1,0 +1,39 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  margin-bottom: 1rem;
+
+  &__thumbnail {
+    width: 7rem;
+    background-color: $background-grey-color;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  &__channel {
+    font-size: .9rem;
+  }
+}
