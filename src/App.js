@@ -10,10 +10,15 @@ import CommentList from './components/CommentList/CommentList';
 import VideoList from './components/VideoList/VideoList';
 
 class App extends Component {
-
   state = {
-    currentVideo: videoData[0],
-    videoList: videosListData
+    currentVideo: videoData[0]
+  }
+
+  selectVideo = (id) => {
+    this.setState({
+      currentVideo: videoData.find(video => video.id === id)
+    });
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -33,8 +38,9 @@ class App extends Component {
           comments = {currentVideo.comments}
         />
         <VideoList 
-          videos = {this.state.videoList}
+          videos = {videosListData}
           currentVideoId = {currentVideo.id}
+          onVideoItemClick = {this.selectVideo}
         />
       </>
     )
