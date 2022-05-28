@@ -1,0 +1,49 @@
+@use '../../styles/partials/variables' as *;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    border-bottom: 1px solid $border-grey-color;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $border-grey-color;
+  }
+
+  &__likes, &__views {
+    display: flex;
+  }
+
+  &__text {
+    color: $text-silver-color;
+    margin-bottom: 1rem;
+
+    &--color {
+      color: $text-dark-color;
+    }
+  }
+
+  &__icon {
+    margin: 0 .5rem 1rem 0;
+  }
+
+  &__description {
+    line-height: 22px;
+    margin-bottom: 1rem;
+  }
+
+  &__comment-count {
+    font-weight: 700;
+  }
+}
