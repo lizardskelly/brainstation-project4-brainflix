@@ -4,6 +4,7 @@ import videoData from './data/video-details.json';
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDetails from './components/VideoDetails/VideoDetails';
+import CommentForm from './components/CommentForm/CommentForm';
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
         <VideoDetails 
           details = {this.state.currentVideo}
         />
+        <CommentForm />
       </>
     )
   }
