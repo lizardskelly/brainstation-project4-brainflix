@@ -5,7 +5,6 @@ const VideoItem = ({ title, channel, image: thumbnail }) => {
     <li className="video-item">
       <div 
         className="video-item__thumbnail" 
-        //src={thumbnail} 
         style={{backgroundImage: `url(${thumbnail})`}}
         alt="video thumbnail"
       />

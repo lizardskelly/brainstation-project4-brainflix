@@ -1,10 +1,12 @@
 import VideoItem from "./VideoItem";
 import './VideoList.scss';
 
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, currentVideoId }) => {
 
   const renderVideoItems = () => {
-    return videos.map(video => {
+    return videos.filter(video => {
+      return video.id !== currentVideoId
+    }).map(video => {
       return (
         <VideoItem
           key = {video.id}

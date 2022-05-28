@@ -34,6 +34,7 @@ class App extends Component {
         />
         <VideoList 
           videos = {this.state.videoList}
+          currentVideoId = {currentVideo.id}
         />
       </>
     )
