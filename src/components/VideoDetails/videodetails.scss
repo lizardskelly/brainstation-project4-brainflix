@@ -26,11 +26,13 @@
   }
 
   &__text {
+    font-size: .9rem;
     color: $text-silver-color;
     margin-bottom: 1rem;
 
     &--color {
       color: $text-dark-color;
+      font-weight: 700;
     }
   }
 
@@ -39,11 +41,13 @@
   }
 
   &__description {
+    font-size: .9rem;
     line-height: 22px;
     margin-bottom: 1rem;
   }
 
   &__comment-count {
+    font-size: .9rem;
     font-weight: 700;
   }
 }
