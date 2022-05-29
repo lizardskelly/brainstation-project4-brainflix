@@ -3,11 +3,7 @@ import './VideoItem.scss';
 const VideoItem = ({ title, channel, image: thumbnail, id, onVideoItemClick }) => {
   return ( 
     <li onClick={() => onVideoItemClick(id)} className="video-item">
-      <div 
-        className="video-item__thumbnail" 
-        style={{backgroundImage: `url(${thumbnail})`}}
-        alt="video thumbnail"
-      />
+      <img className='video-item__thumbnail' alt='thumbnail' src={thumbnail}/>
       <div className="video-item__container">
         <p className="video-item__title">
           {title}

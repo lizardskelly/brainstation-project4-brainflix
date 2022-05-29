@@ -11,8 +11,8 @@
   &__thumbnail {
     width: 7rem;
     background-color: $background-grey-color;
-    background-position: center;
-    background-size: cover;
+    object-position: center;
+    object-fit: cover;
     border-radius: 4px;
     margin-right: 1rem;
   }
