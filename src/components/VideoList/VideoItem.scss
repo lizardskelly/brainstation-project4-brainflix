@@ -37,4 +37,8 @@
   &__channel {
     font-size: .9rem;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
