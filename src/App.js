@@ -11,7 +11,8 @@ import VideoList from './components/VideoList/VideoList';
 
 class App extends Component {
   state = {
-    currentVideo: videoData[0]
+    currentVideo: videoData[0],
+    nextVideos: videosListData
   }
 
   selectVideo = (id) => {
@@ -22,26 +23,28 @@ class App extends Component {
   }
 
   render() {
-    const { currentVideo } = this.state
+    const { currentVideo, nextVideos } = this.state
 
     return (
       <>
         <Header />
-        <VideoPlayer 
-          video = {currentVideo}
-        />
-        <VideoDetails 
-          details = {currentVideo}
-        />
-        <CommentForm />
-        <CommentList 
-          comments = {currentVideo.comments}
-        />
-        <VideoList 
-          videos = {videosListData}
-          currentVideoId = {currentVideo.id}
-          onVideoItemClick = {this.selectVideo}
-        />
+        <main>
+          <VideoPlayer 
+            video = {currentVideo}
+          />
+          <VideoDetails 
+            details = {currentVideo}
+          />
+          <CommentForm />
+          <CommentList 
+            comments = {currentVideo.comments}
+          />
+          <VideoList 
+            videos = {nextVideos}
+            currentVideoId = {currentVideo.id}
+            onVideoItemClick = {this.selectVideo}
+          />
+        </main>
       </>
     )
   }

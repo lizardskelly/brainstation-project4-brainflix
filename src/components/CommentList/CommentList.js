@@ -15,9 +15,11 @@ const CommentList = ({ comments }) => {
   }
 
   return ( 
-    <ul className='comment-list'>
-      {renderComments()}
-    </ul>
+    <section>
+      <ul className='comment-list'>
+        {renderComments()}
+      </ul>
+    </section>
    );
 }
  
