@@ -16,18 +16,18 @@ const VideoDetails = ({ details }) => {
     <section className='details'>
       <h1 className='details__title'>{title}</h1>
       <div className='details__text-container'>
-        <div>
+        <div className='details__text-container--display'>
           <h3 className='details__text details__text--color'>By {channel}</h3>
           <p className='details__text'>{formattedDate(timestamp)}</p>
         </div>
-        <div>
-          <div className='details__likes'>
+        <div className='details__text-container--display'>
+          <div className='details__views'>
             <img className='details__icon'
               src={viewsIcon}
               alt='views'/>
             <p className='details__text'>{views}</p>
           </div>
-          <div className='details__views'>
+          <div className='details__likes'>
             <img className='details__icon'
               src={likesIcon}
               alt='likes'/>
