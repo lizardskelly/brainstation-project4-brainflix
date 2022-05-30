@@ -1,19 +1,33 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixin' as *;
 
 .video-list {
   margin: 1.5rem 1rem 1rem 1rem;
+
+  @include tablet {
+    margin-left: 2rem;
+  }
 
   &__title {
     font-size: .9rem;
     font-weight: 700;
     color: $text-silver-color;
     margin-bottom: 1rem;
+
+    @include tablet {
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
     list-style: none;
+
+    @include tablet {
+      width: 45%;
+    }
   }
 }
