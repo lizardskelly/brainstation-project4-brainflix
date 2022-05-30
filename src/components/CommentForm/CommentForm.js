@@ -9,15 +9,17 @@ const CommentForm = () => {
         src={avatar}
         alt='user avatar'/>
       <div className='form__container'>
-        <label
-          className='form__label'
-          htmlFor='commentInput'>
-          JOIN THE CONVERSATION
-        </label>
-        <input
-          className='form__input'
-          id='commentInput'
-          placeholder='Add a new comment'/>
+        <div className='form__input-container'>
+          <label
+            className='form__label'
+            htmlFor='commentInput'>
+            JOIN THE CONVERSATION
+          </label>
+          <input
+            className='form__input'
+            id='commentInput'
+            placeholder='Add a new comment'/>
+        </div>
         <button
           className='form__button'>
           COMMENT

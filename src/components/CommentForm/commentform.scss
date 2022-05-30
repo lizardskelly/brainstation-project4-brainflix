@@ -1,11 +1,16 @@
 @use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixin' as *;
 
 .form {
   display: flex;
   padding-bottom: 1rem;
   margin: 1rem;
   border-bottom: 1px solid $border-grey-color;
+
+  @include tablet {
+    margin: 1rem 2rem;
+  }
 
   &__avatar {
     height: 2.5rem;
@@ -14,12 +19,29 @@
     object-fit: cover;
     object-position: 20% 50%;
     margin: 1rem 1rem 0 0;
+
+    @include tablet {
+      margin-right: 1.5rem;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__input-container {
+
+    @include tablet {
+      flex-grow: 1;
+    }
   }
 
   &__label {
@@ -37,6 +59,12 @@
     border-radius: 4px;
     padding: 0 0 4rem 1rem;
     margin-bottom: 1rem;
+
+    @include tablet {
+      height: 2.5rem;
+      padding: 0 0 0 1rem;
+      margin-bottom: 0;
+    }
 
     &::placeholder {
       color: $text-dark-color;
@@ -57,6 +85,12 @@
     border: none;
     border-radius: 4px;
     line-height: 0;
+
+    @include tablet {
+      width: 9.5rem;
+      padding-left: 1rem;
+      margin-left: 1.5rem;
+    }
 
     &:hover {
       background-color: $cta-hover-color;
