@@ -4,18 +4,13 @@ import './header.scss';
 
 const Header = () => {
   return (  
-    <>
-      <header
-        className='header'
-      >
+      <header className='header'>
         <img
           className='header__logo'
           src={logo}
           alt='brainflix logo'
         />
-        <div
-          className='header__search-container'
-        >
+        <div className='header__search-container'>
           <input
             className='header__search'
             id='search'
@@ -27,18 +22,13 @@ const Header = () => {
             alt='user avatar'
           />
         </div>
-        <button
-          className='header__button'
-        >
-          UPLOAD
-        </button>
+        <button className='header__button'>UPLOAD</button>
         <img
           className='header__avatar'
           src={avatar}
           alt='user avatar'
         />
       </header>
-    </>
   );
 }
  
