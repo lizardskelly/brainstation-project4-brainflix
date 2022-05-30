@@ -6,12 +6,15 @@ const VideoPlayer = ({ video }) => {
   return ( 
     <section className='video'>
       <div className='video__container'>
-        <video
-          className='video__player'
-          controls
-          poster={image}>
-        </video>
+        <div className='video__aspect-frame'>
+          <video
+            className='video__player'
+            controls
+            poster={image}>
+          </video>
+        </div>
       </div>
+      
     </section>
    );
 }
