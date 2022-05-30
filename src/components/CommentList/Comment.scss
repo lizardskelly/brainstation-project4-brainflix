@@ -13,6 +13,16 @@
     margin-bottom: 1.5rem;
   }
 
+  @include desktop {
+    padding-right: 1.5rem
+  }
+
+  &:last-child {
+    @include desktop {
+      border-bottom: none;
+    }
+  }
+
   &__avatar {
     height: 2.5rem;
     width: 2.5rem;

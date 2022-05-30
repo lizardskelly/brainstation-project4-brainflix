@@ -2,19 +2,23 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixin' as *;
 
+  
 .video {
-
-  width: 100%;
-  padding-top: 56.25%;
-  height: 0px;
   background-color: $background-dark-color;
-  position: relative;
+
+  &__container {
+    width: 100%;
+    padding-top: 56.25%;
+    height: 0;
+    background-color: $background-dark-color;
+    position: relative;
+  }
 
   &__player {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

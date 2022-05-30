@@ -14,6 +14,10 @@
     margin: 1rem 2rem;
   }
 
+  @include desktop {
+    margin: 1rem 8rem;
+  }
+
   &__logo {
     width: 7.5rem;
     margin-bottom: 1rem;
@@ -95,6 +99,10 @@
       width: 9.5rem;
       padding-left: 1rem;
       margin-right: 1rem;
+    }
+
+    @include desktop {
+      margin-right: 2rem;
     }
 
     &:hover {

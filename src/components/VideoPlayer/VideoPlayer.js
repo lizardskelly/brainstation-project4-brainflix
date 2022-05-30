@@ -5,11 +5,13 @@ const VideoPlayer = ({ video }) => {
 
   return ( 
     <section className='video'>
-      <video
-        className='video__player'
-        controls
-        poster={image}>
-      </video>
+      <div className='video__container'>
+        <video
+          className='video__player'
+          controls
+          poster={image}>
+        </video>
+      </div>
     </section>
    );
 }

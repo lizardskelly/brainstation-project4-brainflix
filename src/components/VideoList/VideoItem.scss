@@ -8,6 +8,10 @@
   margin-bottom: 1rem;
   cursor: pointer;
 
+  @include desktop {
+    margin-bottom: 1.5rem;
+  }
+
   &__thumbnail {
     width: 7rem;
     background-color: $background-grey-color;

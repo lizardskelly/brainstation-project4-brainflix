@@ -11,6 +11,10 @@
     margin: 2.25rem 2rem 1.5rem 2rem;
   }
 
+  @include desktop {
+    margin: 2.25rem 0 1.5rem 8rem;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -31,6 +35,10 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     border-bottom: 1px solid $border-grey-color;
+    
+    @include desktop {
+      padding-right: 1.5rem;
+    }
     
     &--display {
   
@@ -79,6 +87,10 @@
 
     @include tablet {
       margin-bottom: 2.25rem;
+    }
+
+    @include desktop {
+      padding-right: 1.5rem;
     }
   }
 

@@ -32,18 +32,22 @@ class App extends Component {
           <VideoPlayer 
             video = {currentVideo}
           />
-          <VideoDetails 
-            details = {currentVideo}
-          />
-          <CommentForm />
-          <CommentList 
-            comments = {currentVideo.comments}
-          />
-          <VideoList 
-            videos = {nextVideos}
-            currentVideoId = {currentVideo.id}
-            onVideoItemClick = {this.selectVideo}
-          />
+          <div className='display'>
+            <div>
+              <VideoDetails 
+                details = {currentVideo}
+              />
+              <CommentForm />
+              <CommentList 
+                comments = {currentVideo.comments}
+              />
+            </div>
+            <VideoList 
+              videos = {nextVideos}
+              currentVideoId = {currentVideo.id}
+              onVideoItemClick = {this.selectVideo}
+            />
+          </div>
         </main>
       </>
     )
