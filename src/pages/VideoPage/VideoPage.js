@@ -6,7 +6,7 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 import CommentList from '../../components/CommentList/CommentList';
 import VideoList from '../../components/VideoList/VideoList';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
-
+import './VideoPage.scss';
 
 
 
@@ -20,7 +20,8 @@ class VideoPage extends Component {
     if(this.props.match.params.videoId !== prevProps.match.params.videoId) {
       this.setState({
         currentVideo: videoData.find(video => video.id === this.props.match.params.videoId) || videoData[0]
-      })
+      });
+      window.scrollTo(0, 0);
     }
   }
 

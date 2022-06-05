@@ -17,16 +17,24 @@
   @include desktop {
     margin: 1rem 8rem;
   }
+  
+  &__logo-link {
+    display: flex;
+    
+    @include tablet {
+      margin: 0 auto 0 0;
+    }
+  }
 
   &__logo {
     width: 7.5rem;
     margin-bottom: 1rem;
 
     @include tablet {
-      margin: 0 auto 0 0;
+      margin-bottom: 0;
     }
   }
-
+  
   &__search-container {
     display: flex;
     width: 100%;
@@ -81,6 +89,14 @@
       @include tablet {
         display: none;
       }
+    }
+  }
+
+  &__button-link {
+    width: 100%;
+
+    @include tablet {
+      width: fit-content;
     }
   }
 

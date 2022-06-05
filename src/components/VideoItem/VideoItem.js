@@ -1,5 +1,5 @@
 import './VideoItem.scss';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const VideoItem = ({ title, channel, image: thumbnail, id }) => {
   return ( 
