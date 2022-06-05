@@ -25,7 +25,7 @@ const Header = () => {
             alt='user avatar'
           />
         </div>
-        <Link className='header__button-link'>
+        <Link className='header__button-link' to={'/upload'}>
           <button className='header__button'>UPLOAD</button>
         </Link>
         <img
