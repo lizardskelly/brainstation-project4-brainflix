@@ -1,32 +1,62 @@
-import { Component } from 'react';
-import videoData from '../../data/video-details.json';
-import videosListData from '../../data/videos.json'
+import React, { Component } from 'react';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 import CommentForm from '../../components/CommentForm/CommentForm';
 import CommentList from '../../components/CommentList/CommentList';
 import VideoList from '../../components/VideoList/VideoList';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import './VideoPage.scss';
+import axios from 'axios';
 
-
+const authKey = "f50affb6-017b-486c-8a8d-d4055e70f7af"
 
 class VideoPage extends Component {
   state = { 
-    nextVideos: videosListData,
-    currentVideo: videoData[0]
+    videoList: [],
+    currentVideo: undefined
+  }
+
+  retrieveVideoList() {
+    return axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${authKey}`)
+      .catch(error => {
+        console.error(error.message)
+      })
+  }
+
+  retrieveVideoDetails(id) {
+    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=${authKey}`)
+      .then(details => {
+        this.setState({
+          currentVideo: details.data
+        })
+      }).catch(error => {
+        console.error(error.message)
+      })
+  }
+
+  componentDidMount() {
+    this.retrieveVideoList().then(response => {
+      this.setState({
+        videoList: response.data
+      })
+      const videoId = this.props.match.params.videoId || response.data[0].id;
+      this.retrieveVideoDetails(videoId);
+    })
   }
 
   componentDidUpdate(prevProps) {
     if(this.props.match.params.videoId !== prevProps.match.params.videoId) {
-      this.setState({
-        currentVideo: videoData.find(video => video.id === this.props.match.params.videoId) || videoData[0]
-      });
+      const videoId = this.props.match.params.videoId || this.state.videoList[0].id;
+      this.retrieveVideoDetails(videoId);
       window.scrollTo(0, 0);
     }
   }
 
   render() { 
-    const { nextVideos, currentVideo } = this.state;
+    const { videoList, currentVideo } = this.state;
+
+    if(!currentVideo) {
+      return <main className='loading'>Loading</main>
+    }
 
     return (
       <main>
@@ -44,7 +74,7 @@ class VideoPage extends Component {
             />
           </div>
           <VideoList 
-            videos = {nextVideos}
+            videos = {videoList}
             currentVideoId = {currentVideo.id}
           />
         </div>
