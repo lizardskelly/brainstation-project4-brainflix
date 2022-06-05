@@ -8,6 +8,9 @@ import VideoDetails from './components/VideoDetails/VideoDetails';
 import CommentForm from './components/CommentForm/CommentForm';
 import CommentList from './components/CommentList/CommentList';
 import VideoList from './components/VideoList/VideoList';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
+
 
 class App extends Component {
   state = {
@@ -26,7 +29,7 @@ class App extends Component {
     const { currentVideo, nextVideos } = this.state
 
     return (
-      <>
+      <BrowserRouter>
         <Header />
         <main>
           <VideoPlayer 
@@ -49,7 +52,7 @@ class App extends Component {
             />
           </div>
         </main>
-      </>
+      </BrowserRouter>
     )
   }
 }

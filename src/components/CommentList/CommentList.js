@@ -1,5 +1,5 @@
 import './CommentList.scss';
-import Comment from './Comment';
+import Comment from '../Comment/Comment';
 
 const CommentList = ({ comments }) => {
 

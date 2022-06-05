@@ -1,4 +1,4 @@
-import VideoItem from "./VideoItem";
+import VideoItem from "../VideoItem/VideoItem";
 import './VideoList.scss';
 
 const VideoList = ({ videos, currentVideoId, onVideoItemClick }) => {
