@@ -8,10 +8,22 @@
   padding: 1.5rem 1rem;
   border-top: 1px solid $border-grey-color;
 
+  @include tablet {
+    padding: 2.25rem 2rem 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+
+    @include tablet {
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $border-grey-color;
+      margin-bottom: 2rem;
+    }
   }
 
   &__label {
@@ -26,11 +38,24 @@
     background-color: $background-grey-color;
     border-radius: 4px;
     margin-bottom: 1rem;
+
+    @include tablet {
+      width: 50%;
+    }
   }
 
   &__input-container {
     display: flex;
     flex-direction: column;
+
+    &--border {
+
+      @include tablet {
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $border-grey-color;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &__input {
@@ -44,9 +69,9 @@
     padding-left: .5rem;
     margin-bottom: 1rem;
 
-    &--height {
-      height: 7rem;
-      padding-bottom: 4rem;
+    &--describe {
+      height: 5rem;
+      padding-bottom: 2.5rem;
     }
 
     &::placeholder {
@@ -55,6 +80,14 @@
 
     &:focus {
       outline: 2px solid $border-blue-color;
+    }
+  }
+
+  &__button-container {
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -69,8 +102,17 @@
     border: none;
     margin-top: .5rem;
 
+    @include tablet {
+      display: block;
+      width: 9.5rem;
+    }
+
     &--mobile {
       display: block;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
@@ -84,6 +126,11 @@
     border: none;
     border-radius: 4px;
     margin: .5rem 0 1rem 0;
+
+    @include tablet {
+      width: 9.5rem;
+      margin: .5rem 0 0 2rem;
+    }
 
     &:hover {
       background-color: $cta-hover-color;

@@ -11,23 +11,25 @@ const UploadPage = () => {
         <p className='upload__label'>VIDEO THUMBNAIL</p>
         <img className='upload__thumbnail' src={thumbnail} alt='video thumbnail'/>
       </div>
-      <form className='upload__form'>
+      <form>
         <div className='upload__input-container'>
           <label className='upload__label' htmlFor='title'>
             TITLE YOUR VIDEO
           </label>
           <input className='upload__input' name='title' placeholder='Add a title to your video'/>
         </div>
-        <div className='upload__input-container'>
+        <div className='upload__input-container upload__input-container--border'>
           <label className='upload__label' htmlFor='describe'>
             ADD A VIDEO DESCRIPTION
           </label>
-          <input className='upload__input upload__input--height' name='describe' placeholder='Add a description to your video'/>
+          <input className='upload__input upload__input--describe' name='describe' placeholder='Add a description to your video'/>
         </div>
-        <Link to={'/'}>
-          <button className='upload__cancel'>CANCEL</button>
-        </Link>
-        <button className='upload__button'>PUBLISH</button>
+        <div className='upload__button-container'>
+          <Link to={'/'}>
+            <button className='upload__cancel'>CANCEL</button>
+          </Link>
+          <button className='upload__button'>PUBLISH</button>
+        </div>
       </form>
       <Link to={'/'}>
         <button className='upload__cancel upload__cancel--mobile'>CANCEL</button>
