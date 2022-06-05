@@ -1,7 +1,7 @@
 import VideoItem from "../VideoItem/VideoItem";
 import './VideoList.scss';
 
-const VideoList = ({ videos, currentVideoId, onVideoItemClick }) => {
+const VideoList = ({ videos, currentVideoId }) => {
   const renderVideoItems = () => {
     return videos.filter(video => {
       return video.id !== currentVideoId
@@ -9,7 +9,6 @@ const VideoList = ({ videos, currentVideoId, onVideoItemClick }) => {
       return (
         <VideoItem
           key = {video.id}
-          onVideoItemClick = {onVideoItemClick}
           {...video}
         />
       )
@@ -23,7 +22,7 @@ const VideoList = ({ videos, currentVideoId, onVideoItemClick }) => {
         {renderVideoItems()}
       </ul>
     </section>
-   );
+  );
 }
  
 export default VideoList;
