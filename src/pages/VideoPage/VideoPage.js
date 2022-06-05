@@ -61,21 +61,21 @@ class VideoPage extends Component {
     return (
       <main>
         <VideoPlayer 
-          video = {currentVideo}
+          video={currentVideo}
         />
         <div className='display'>
           <div>
             <VideoDetails 
-              details = {currentVideo}
+              details={currentVideo}
             />
             <CommentForm />
             <CommentList 
-              comments = {currentVideo.comments}
+              comments={currentVideo.comments}
             />
           </div>
           <VideoList 
-            videos = {videoList}
-            currentVideoId = {currentVideo.id}
+            videos={videoList}
+            currentVideoId={currentVideo.id}
           />
         </div>
       </main>
