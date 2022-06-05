@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/BrainFlix-logo.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
-import './header.scss';
+import './PageHeader.scss';
 
-const Header = () => {
+const PageHeader = () => {
   return (  
       <header className='header'>
         <Link className='header__logo-link' to={'/'}>
@@ -37,4 +37,4 @@ const Header = () => {
   );
 }
  
-export default Header;
+export default PageHeader;

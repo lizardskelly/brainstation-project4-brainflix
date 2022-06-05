@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './App.scss';
-import Header from './components/Header/Header';
+import PageHeader from './components/Header/PageHeader';
 import VideoPage from './pages/VideoPage/VideoPage';
 import UploadPage from './pages/UploadPage/UploadPage';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Header />
+        <PageHeader />
         <Switch>
           <Route path='/' exact component={VideoPage} />
           <Route path='/video/:videoId' component={VideoPage} />
