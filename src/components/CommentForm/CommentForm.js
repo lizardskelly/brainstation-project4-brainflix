@@ -21,6 +21,7 @@ const CommentForm = () => {
             placeholder='Add a new comment'/>
         </div>
         <button
+          onClick={(event) => event.preventDefault()}
           className='form__button'>
           COMMENT
         </button>
