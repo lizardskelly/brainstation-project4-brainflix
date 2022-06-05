@@ -11,6 +11,7 @@ class App extends Component {
         <Switch>
           <Route path='/' exact component={VideoPage} />
           <Route path='/video/:videoId' component={VideoPage} />
+          {/* <Route path='/upload' component={UploadPage} /> */}
         </Switch>
       </BrowserRouter>
     )
