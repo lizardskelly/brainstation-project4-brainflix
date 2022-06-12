@@ -7,8 +7,7 @@ import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import './VideoPage.scss';
 import axios from 'axios';
 
-const authKey = "f50affb6-017b-486c-8a8d-d4055e70f7af"
-
+const serverHost = 'http://localhost:8000';
 class VideoPage extends Component {
   state = { 
     videoList: [],
@@ -16,14 +15,14 @@ class VideoPage extends Component {
   }
 
   retrieveVideoList() {
-    return axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${authKey}`)
+    return axios.get(`${serverHost}/videos`)
       .catch(error => {
         console.error(error.message)
       })
   }
 
   retrieveVideoDetails(id) {
-    axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=${authKey}`)
+    axios.get(`${serverHost}/videos/${id}`)
       .then(details => {
         this.setState({
           currentVideo: details.data
