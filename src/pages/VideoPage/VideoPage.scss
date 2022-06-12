@@ -6,4 +6,10 @@
   @include desktop {
     display: flex;
   }
+
+  &__video-page {
+    @include desktop {
+      width: 120%;
+    }
+  }
 }

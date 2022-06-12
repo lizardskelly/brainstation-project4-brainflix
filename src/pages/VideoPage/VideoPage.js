@@ -63,7 +63,7 @@ class VideoPage extends Component {
           video={currentVideo}
         />
         <div className='display'>
-          <div>
+          <div className='display__video-page'>
             <VideoDetails 
               details={currentVideo}
             />
