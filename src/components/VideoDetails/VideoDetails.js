@@ -1,5 +1,3 @@
-import viewsIcon from '../../assets/images/views.svg';
-import likesIcon from '../../assets/images/likes.svg';
 import './videodetails.scss';
 
 const VideoDetails = ({ details }) => {
@@ -23,13 +21,13 @@ const VideoDetails = ({ details }) => {
         <div className='details__text-container--display'>
           <div className='details__views'>
             <img className='details__icon'
-              src={viewsIcon}
+              src='http://localhost:8000/images/views.svg'
               alt='views'/>
             <p className='details__text'>{views}</p>
           </div>
           <div className='details__likes'>
             <img className='details__icon'
-              src={likesIcon}
+              src='http://localhost:8000/images/likes.svg'
               alt='likes'/>
             <p className='details__text'>{likes}</p>
           </div>

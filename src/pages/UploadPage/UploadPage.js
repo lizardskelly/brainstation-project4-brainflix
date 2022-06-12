@@ -1,5 +1,4 @@
 import './UploadPage.scss';
-import thumbnail from '../../assets/images/Upload-video-preview.jpg';
 import { Link } from 'react-router-dom';
 
 
@@ -11,7 +10,7 @@ const UploadPage = () => {
         <div className='upload__form-container'>
           <div className='upload__image-container'>
             <p className='upload__label'>VIDEO THUMBNAIL</p>
-            <img className='upload__thumbnail' src={thumbnail} alt='video thumbnail'/>
+            <img className='upload__thumbnail' src='http://localhost:8000/images/Upload-video-preview.jpg' alt='video thumbnail'/>
           </div>
           <div className='upload__input-container--display'>
           <div className='upload__input-container'>

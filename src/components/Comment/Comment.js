@@ -1,8 +1,6 @@
 import './Comment.scss';
-import placeholder from '../../assets/images/placeholder.jpg';
 
 const Comment = ({ name, comment: body, timestamp }) => {
-
   const formattedDate = timestamp => {
     const timeNum = Number(timestamp);
     const date = new Date(timeNum);
@@ -11,7 +9,7 @@ const Comment = ({ name, comment: body, timestamp }) => {
 
   return ( 
     <li className="comment">
-      <img className="comment__avatar" src={placeholder} alt="user avatar"/>
+      <img className="comment__avatar" src='http://localhost:8000/images/placeholder.jpg' alt="user avatar"/>
       <div className="comment__container">
         <div className="comment__info">
           <p className="comment__name">

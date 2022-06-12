@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/BrainFlix-logo.svg';
-import avatar from '../../assets/images/Mohan-muruge.jpg';
 import './PageHeader.scss';
 
 const PageHeader = () => {
@@ -9,7 +7,7 @@ const PageHeader = () => {
         <Link className='header__logo-link' to={'/'}>
           <img
             className='header__logo'
-            src={logo}
+            src='http://localhost:8000/images/Brainflix-logo.svg'
             alt='brainflix logo'
           />
         </Link>
@@ -21,7 +19,7 @@ const PageHeader = () => {
           />
           <img
             className='header__avatar header__avatar--mobile'
-            src={avatar}
+            src='http://localhost:8000/images/Mohan-muruge.jpg'
             alt='user avatar'
           />
         </div>
@@ -30,7 +28,7 @@ const PageHeader = () => {
         </Link>
         <img
           className='header__avatar'
-          src={avatar}
+          src='http://localhost:8000/images/Mohan-muruge.jpg'
           alt='user avatar'
         />
       </header>

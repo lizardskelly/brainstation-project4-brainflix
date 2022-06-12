@@ -1,4 +1,3 @@
-import avatar from '../../assets/images/Mohan-muruge.jpg';
 import './commentform.scss'
 
 const CommentForm = () => {
@@ -6,7 +5,7 @@ const CommentForm = () => {
     <form className="form">
       <img
         className='form__avatar'
-        src={avatar}
+        src='http://localhost:8000/images/Mohan-muruge.jpg'
         alt='user avatar'/>
       <div className='form__container'>
         <div className='form__input-container'>

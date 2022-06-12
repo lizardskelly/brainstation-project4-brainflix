@@ -48,7 +48,7 @@
   &__search {
     width: 100%;
     height: 2.25rem;
-    background: url(../../assets/images/search.svg) no-repeat .75rem;
+    background: url(http://localhost:8000/images/search.svg) no-repeat .75rem;
     background-color: #f7f7f7;
     font-size: .75rem;
     color: $text-dark-color;
@@ -104,7 +104,7 @@
   &__button {
     height: 2.5rem;
     width: 100%;
-    background: url(../../assets/images/upload.svg) no-repeat .75rem;
+    background: url(http://localhost:8000/images/upload.svg) no-repeat .75rem;
     background-color: $cta-main-color;
     color: $text-white-color;
     font-size: .75rem;
