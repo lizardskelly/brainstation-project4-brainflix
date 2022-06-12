@@ -10,19 +10,25 @@ const UploadPage = ({ history }) => {
   
   const publishVideo = () => {
     const form = formRef.current;
-    axios.post(`${serverHost}/videos`, {
-      title: form.title.value,
-      channel: "PavelPavelton",
-      image: form.thumbnail.src,
-      description: form.describe.value
-    })
-    .then(response => {
-      let id = response.data;
-      history.push(`/video/${id}`);
-    })
-    .catch(error => {
-      console.error(error.message)
-    });
+    if (!form.title.value) {
+      window.alert('Please give a video title!');
+    } else if (!form.describe.value) {
+      window.alert('Please give a video description!');
+    } else {
+      axios.post(`${serverHost}/videos`, {
+        title: form.title.value,
+        channel: "PavelPavelton",
+        image: form.thumbnail.src,
+        description: form.describe.value
+      })
+      .then(response => {
+        let id = response.data;
+        history.push(`/video/${id}`);
+      })
+      .catch(error => {
+        console.error(error.message)
+      });
+    }
   };
 
   return ( 
