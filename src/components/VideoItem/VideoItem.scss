@@ -26,6 +26,10 @@
     width: 60%;
     flex-direction: column;
     justify-content: space-between;
+
+    @include desktop {
+      width: 45%
+    }
   }
 
   &__title {
