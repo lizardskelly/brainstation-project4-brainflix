@@ -5,9 +5,9 @@ import { createRef } from 'react';
 
 const serverHost = 'http://localhost:8000';
 
-const UploadPage = () => {
+const UploadPage = ({ history }) => {
   const formRef = createRef();
-
+  
   const publishVideo = () => {
     const form = formRef.current;
     axios.post(`${serverHost}/videos`, {
@@ -17,8 +17,11 @@ const UploadPage = () => {
       description: form.describe.value
     })
     .then(response => {
-      let id = response.data.id;
-      console.log(id);
+      let id = response.data;
+      history.push(`/video/${id}`);
+    })
+    .catch(error => {
+      console.error(error.message)
     });
   };
 
