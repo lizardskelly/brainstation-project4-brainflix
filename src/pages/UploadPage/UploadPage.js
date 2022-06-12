@@ -1,16 +1,35 @@
 import './UploadPage.scss';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { createRef } from 'react';
 
+const serverHost = 'http://localhost:8000';
 
 const UploadPage = () => {
+  const formRef = createRef();
+
+  const publishVideo = () => {
+    const form = formRef.current;
+    axios.post(`${serverHost}/videos`, {
+      title: form.title.value,
+      channel: "PavelPavelton",
+      image: form.thumbnail.src,
+      description: form.describe.value
+    })
+    .then(response => {
+      let id = response.data.id;
+      console.log(id);
+    });
+  };
+
   return ( 
     <section className='upload'>
       <h1 className='upload__title'>Upload Video</h1>
-      <form>
+      <form ref={formRef}>
         <div className='upload__form-container'>
           <div className='upload__image-container'>
             <p className='upload__label'>VIDEO THUMBNAIL</p>
-            <img className='upload__thumbnail' src='http://localhost:8000/images/Upload-video-preview.jpg' alt='video thumbnail'/>
+            <img className='upload__thumbnail' id='thumbnail' src='http://localhost:8000/images/Upload-video-preview.jpg' alt='video thumbnail'/>
           </div>
           <div className='upload__input-container--display'>
           <div className='upload__input-container'>
@@ -31,9 +50,7 @@ const UploadPage = () => {
           <Link to={'/'}>
             <button className='upload__cancel'>CANCEL</button>
           </Link>
-          <Link to={'/'}>
-            <button className='upload__button' onClick={() => window.alert('Video uploaded! Press OK to continue.')}>PUBLISH</button>
-          </Link>
+          <button className='upload__button' type='button' onClick={publishVideo}>PUBLISH</button>
         </div>
       </form>
       <Link to={'/'}>
