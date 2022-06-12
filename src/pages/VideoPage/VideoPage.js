@@ -17,9 +17,10 @@ class VideoPage extends Component {
   retrieveVideoList() {
     return axios.get(`${serverHost}/videos`)
       .catch(error => {
-        console.error(error.message)
-      })
-  }
+        console.error(error.message);
+        console.error('Could not retrieve video list');
+      });
+  };
 
   retrieveVideoDetails(id) {
     axios.get(`${serverHost}/videos/${id}`)
@@ -27,10 +28,12 @@ class VideoPage extends Component {
         this.setState({
           currentVideo: details.data
         })
-      }).catch(error => {
-        console.error(error.message)
       })
-  }
+      .catch(error => {
+        console.error(error.message);
+        console.error('Could not retrieve video with provided ID');
+      });
+  };
 
   componentDidMount() {
     this.retrieveVideoList().then(response => {
